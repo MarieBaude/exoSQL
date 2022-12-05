@@ -40,4 +40,11 @@ FROM emp
 WHERE emploi = 'PRESIDENT' OR emploi = 'DIRECTEUR';
 
 /*19 : Sélectionner les directeurs qui ne sont pas dans le service 3.*/
+SELECT nom, prenom
+FROM emp
+WHERE emploi = 'DIRECTEUR' AND noserv != 3;
+
 /*20 : Sélectionner les directeurs et « les techniciens du service 1 ».*/
+SELECT nom, prenom
+FROM emp
+WHERE emploi = 'TECHNICIEN' OR emploi = 'DIRECTEUR' AND noserv = 1;
