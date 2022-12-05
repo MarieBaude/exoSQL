@@ -5,19 +5,21 @@ WHERE noserv = 3
 ORDER BY sal DESC;
 
 /*42 : Idem en indiquant le numéro de colonne à la place du nom colonne.*/
-SELECT nom, prenom, noserv, sal
-FROM emp
-WHERE noserv = 3
-ORDER BY sal DESC;
+
 
 /*43 : Trier les employés (nom, prénom, n° de service, salaire, emploi) par emploi, et pour chaque emploi par ordre décroissant de salaire.*/
-
+SELECT nom, prenom, noserv, sal, emploi
+FROM emp
+ORDER BY emploi DESC, sal DESC;
 
 /*44 : Idem en indiquant les numéros de colonnes.*/
 
 
 /*45 : Trier les employés (nom, prénom, n° de service, commission) du service3 par ordre croissant de commission.*/
-
+SELECT nom, prenom, noserv, comm
+FROM emp
+WHERE noserv = 3
+ORDER BY comm;
 
 /*46 : Trier les employés (nom, prénom, n° de service, commission) du service 3 par ordre décroissant de commission, en considérant que celui dont la commission est nulle ne touche pas de commission.*/
 
