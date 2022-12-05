@@ -1,10 +1,13 @@
 /*21 : Sélectionner les « directeurs et les techniciens » du service 1.*/
 SELECT nom, prenom
 FROM emp
-WHERE emploi = 'TECHNICIEN' OR emploi = 'DIRECTEUR' AND noserv = 1;
+WHERE emploi = 'TECHNICIEN' AND noserv = 1
+OR emploi = 'DIRECTEUR' AND noserv = 1;
 
 /*22 : Sélectionner les employés du service 1 qui sont directeurs ou techniciens.*/
-
+SELECT nom, prenom
+FROM emp
+WHERE emploi = 'TECHNICIEN' OR emploi = 'DIRECTEUR' AND noserv = 1;
 
 /*23 : Sélectionner les employés qui ne sont ni directeur, ni technicien et travaillant dans le service 1.*/
 
