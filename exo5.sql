@@ -1,14 +1,14 @@
--- Lister tous les types de postes n’existant pas dans le parc informatique /chercher NC
+-- Lister tous les types de postes n’existant pas dans le parc informatique ?
 SELECT TYPE_POSTE 
 FROM POSTE
-INNER JOIN TYPE ON  ;
+INNER JOIN TYPE ON TYPE_LP != TYPE_POSTE; 
 
--- Lister les types existants à la fois comme poste et comme logiciel
+-- Lister les types existants à la fois comme poste et comme logiciel ?
 SELECT TYPE_LP 
 FROM Type
-INNER JOIN LOGICIEL ON TYPE_POSTE = ;
+INNER JOIN LOGICIEL ON TYPE_POSTE = TYPE_LP AND TYPE_LOGICIEL = TYPE_LP;
 
--- Lister les types qui existent en tant que poste mais pas en tant que logiciel
+-- Lister les types qui existent en tant que poste mais pas en tant que logiciel ?
 
 
 -- Lister les ip des postes qui contiennent le logiciel « Log6 »
