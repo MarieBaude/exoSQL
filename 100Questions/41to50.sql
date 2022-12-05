@@ -43,7 +43,12 @@ SELECT emp.noserv, nom, prenom, emploi, service
 FROM emp
 INNER JOIN serv ON emp.noserv = serv.noserv;
 
-/*49 : Idem en utilisant des alias pour les noms de tables.*
-
+/*49 : Idem en utilisant des alias pour les noms de tables.*/
+SELECT emp.noserv AS "1", nom AS "2", prenom AS "3", emploi AS "4", service AS "5"
+FROM emp
+INNER JOIN serv ON emp.noserv = serv.noserv;
 
 /*50 : Sélectionner le nom, l'emploi, suivis de toutes les colonnes de la table SERV pour tous les employés.*/
+SELECT nom, emploi, serv.noserv, service, ville
+FROM emp
+INNER JOIN serv ON emp.noserv = serv.noserv;
