@@ -37,3 +37,6 @@ FROM serv
 WHERE noserv > 2;
 
 /*10 : Sélectionner les noms, numéros de service de tous les services dont le numéro est inférieur ou égal à 2.*/
+SELECT service, noserv
+FROM serv
+WHERE noserv <= 2;
