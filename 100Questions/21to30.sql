@@ -48,6 +48,7 @@ WHERE sal < 20000
 OR sal > 40000;
 
 /*30 : Sélectionner les employés qui ne sont pas directeur et qui ont été embauchés en 88.*/
+-- a corriger
 SELECT nom, prenom, embauche
 FROM emp
 WHERE emploi != 'DIRECTEUR' 
