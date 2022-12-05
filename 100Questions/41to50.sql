@@ -22,7 +22,11 @@ WHERE noserv = 3
 ORDER BY comm;
 
 /*46 : Trier les employés (nom, prénom, n° de service, commission) du service 3 par ordre décroissant de commission, en considérant que celui dont la commission est nulle ne touche pas de commission.*/
-
+SELECT nom, prenom, noserv, comm
+FROM emp
+WHERE noserv = 3
+AND comm IS NOT NULL
+ORDER BY comm DESC;
 
 /*47 : Sélectionner le nom, le prénom, l'emploi, le nom du service de l'employé pour tous les employés.*/
 
