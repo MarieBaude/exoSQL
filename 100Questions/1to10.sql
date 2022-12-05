@@ -10,11 +10,30 @@ SELECT SERVICE, NOSERV
 FROM serv;
 
 /*4:Sélectionner toutes les colonnes de la table EMP.*/
-
+SELECT *
+FROM emp;
 
 /*5:Sélectionner les emplois de la table EMP.*/
+SELECT emploi
+FROM emp;
+
 /*6:Sélectionner les différents emplois de la table EMP.*/
+SELECT DISTINCT emploi
+FROM emp;
+
 /*7 : Sélectionner les employés du service N°3.*/
+SELECT prenom, nom, 
+FROM emp
+WHERE noserv = 3;
+
 /*8 : Sélectionner les noms, prénoms, numéro d’employé, numéro de service de tous les techniciens.*/
-/*9 : Sélectionner les noms, numéros de service de tous les servicesdont le numéro est supérieur à 2.*/
+SELECT prenom, nom, noemp, noserv
+FROM emp
+WHERE emploi = 'TECHNICIEN';
+
+/*9 : Sélectionner les noms, numéros de service de tous les services dont le numéro est supérieur à 2.*/
+SELECT service, noserv
+FROM serv
+WHERE noserv > 2;
+
 /*10 : Sélectionner les noms, numéros de service de tous les services dont le numéro est inférieur ou égal à 2.*/
