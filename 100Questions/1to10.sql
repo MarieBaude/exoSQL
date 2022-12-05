@@ -1,9 +1,17 @@
 /*1:Sélectionner toutes les colonnes de la table SERV.*/
-
+SELECT *
+FROM serv;
 
 /*2:Sélectionner d’une autre manière ces colonnes.*/
+non
+
 /*3:Sélectionner les colonnes SERVICE et NOSERV de la table SERV.*/
+SELECT SERVICE, NOSERV
+FROM serv;
+
 /*4:Sélectionner toutes les colonnes de la table EMP.*/
+
+
 /*5:Sélectionner les emplois de la table EMP.*/
 /*6:Sélectionner les différents emplois de la table EMP.*/
 /*7 : Sélectionner les employés du service N°3.*/
