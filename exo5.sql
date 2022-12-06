@@ -13,7 +13,10 @@ SELECT type_logiciel
 FROM logiciel;
 
 -- Lister les types qui existent en tant que poste mais pas en tant que logiciel ?
-
+SELECT type_poste
+FROM poste
+WHERE type_poste 
+NOT IN (SELECT type_logiciel FROM logiciel);
 
 -- Lister les ip des postes qui contiennent le logiciel « Log6 »
 SELECT N_SEGMENT
