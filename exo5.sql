@@ -1,11 +1,16 @@
 -- Lister tous les types de postes n’existant pas dans le parc informatique ?
 SELECT type_lp
 FROM type
-EXCEPT SELECT type_poste
+EXCEPT 
+SELECT type_poste
 FROM poste;
 
 -- Lister les types existants à la fois comme poste et comme logiciel ?
-
+SELECT type_poste
+FROM poste
+INTERSECT
+SELECT type_logiciel
+FROM logiciel;
 
 -- Lister les types qui existent en tant que poste mais pas en tant que logiciel ?
 
