@@ -1,12 +1,11 @@
 -- Lister tous les types de postes n’existant pas dans le parc informatique ?
-SELECT TYPE_POSTE 
-FROM POSTE
-INNER JOIN TYPE ON TYPE_LP != TYPE_POSTE; 
+SELECT type_lp
+FROM type
+EXCEPT SELECT type_poste
+FROM poste;
 
 -- Lister les types existants à la fois comme poste et comme logiciel ?
-SELECT TYPE_LP 
-FROM Type
-INNER JOIN LOGICIEL ON TYPE_POSTE = TYPE_LP AND TYPE_LOGICIEL = TYPE_LP;
+
 
 -- Lister les types qui existent en tant que poste mais pas en tant que logiciel ?
 
