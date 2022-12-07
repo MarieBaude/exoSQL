@@ -1,5 +1,9 @@
 /*51 : Sélectionner les nom et date d'embauche des employés suivi des nom et date d'embauche de leur supérieur pour les employés plus ancien que leur supérieur, dans l'ordre nom employés, noms supérieurs.*/
+SELECT nom, embauche, emploi
+FROM emp
+WHERE emploi != 'DIRECTEUR' OR emploi != 'PRESIDENT'
 
+;
 
 /*52 : Sélectionner sans doublon les prénoms des directeurs et « les prénoms des techniciens du service 1 » avec un UNION.*/
 
@@ -14,7 +18,14 @@
 
 
 /*56 : Sélectionner les employés qui ont le même chef que DUBOIS, DUBOIS exclu.*/
-
+SELECT nom
+FROM emp
+WHERE emploi = 'VENDEUR' 
+INTERSECT
+SELECT nom
+FROM emp
+WHERE nom = 'DUBOIS'
+;
 
 /*57 : Sélectionner les employés embauchés le même jour que DUMONT.*
 
