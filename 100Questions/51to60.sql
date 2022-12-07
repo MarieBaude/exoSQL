@@ -64,9 +64,12 @@ IN
 /*58 : Sélectionner les nom et date d'embauche des employés plus anciens que MINET, dans l’ordre des embauches.*/
 SELECT nom, prenom, embauche
 FROM emp
-WHERE embauche < 
-ORDER BY embauche
-;
+WHERE embauche <
+    (SELECT embauche
+    FROM emp
+    WHERE nom = 'MINET'
+    )
+ORDER BY embauche DESC;
 
 
 /*59 : Sélectionner le nom, le prénom, la date d’embauche des employés plus anciens que tous les employés du service N°6. (Attention MIN)*/
