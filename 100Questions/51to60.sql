@@ -16,14 +16,27 @@ WHERE emploi = 'TECHNICIEN' AND noserv = 1;
 
 /*53 : Sélectionner les numéros de services n’ayant pas d’employés sans une jointure externe.*/
 SELECT noserv
-FROM emp
-WHERE ;
+FROM serv
+WHERE noserv 
+NOT IN 
+    (SELECT noserv
+    FROM emp);
 
 /*54 : Sélectionner les services ayant au moins un employé.*/
-
+SELECT noserv
+FROM serv
+WHERE noserv 
+IN 
+    (SELECT noserv
+    FROM emp);
 
 /*54 bis : Sélectionner les numéros de services ayant des employés sans une jointure externe*/
-
+SELECT noserv
+FROM serv
+WHERE noserv 
+IN 
+    (SELECT noserv
+    FROM emp);
 
 /*56 : Sélectionner les employés qui ont le même chef que DUBOIS, DUBOIS exclu.*/
 SELECT nom, prenom
