@@ -71,8 +71,21 @@ WHERE embauche <
     )
 ORDER BY embauche DESC;
 
-
 /*59 : Sélectionner le nom, le prénom, la date d’embauche des employés plus anciens que tous les employés du service N°6. (Attention MIN)*/
-
+SELECT nom, prenom, embauche
+FROM emp
+WHERE embauche <
+    (SELECT MIN(embauche)
+    FROM emp
+    WHERE noserv = 6
+    );
 
 /*60 : Sélectionner le nom, le prénom, le revenu mensuel des employés qui gagnent plus qu'au moins un employé du service N°3, trier le résultat dans l'ordre croissant des revenus mensuels.*/
+SELECT nom, prenom, sal
+FROM emp
+WHERE sal <
+    (SELECT MIN(sal)
+    FROM emp
+    WHERE noserv = 3
+    )
+ORDER BY sal;
