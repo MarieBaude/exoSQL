@@ -21,8 +21,10 @@
 
 /*98 : Sélectionner les employés ayant plus de 12 ans d’ancienneté.
 
+
+
 Plus amusant … ou pas
 /*99 : Depuis combien de jours êtes-vous nés ?
 
 
-/*00 : Depuis combien de mois êtes-vous nés ?
+/*100 : Depuis combien de mois êtes-vous nés ?

@@ -14,9 +14,10 @@ SELECT DISTINCT prenom
 FROM emp
 WHERE emploi = 'TECHNICIEN' AND noserv = 1;
 
-
 /*53 : Sélectionner les numéros de services n’ayant pas d’employés sans une jointure externe.*/
-
+SELECT noserv
+FROM emp
+WHERE ;
 
 /*54 : Sélectionner les services ayant au moins un employé.*/
 
@@ -25,11 +26,11 @@ WHERE emploi = 'TECHNICIEN' AND noserv = 1;
 
 
 /*56 : Sélectionner les employés qui ont le même chef que DUBOIS, DUBOIS exclu.*/
-SELECT nom
+SELECT nom, prenom
 FROM emp
-WHERE emploi = 'VENDEUR' 
-INTERSECT
-SELECT nom
+WHERE sup = 1300
+EXCEPT 
+SELECT nom, prenom
 FROM emp
 WHERE nom = 'DUBOIS'
 ;

@@ -1,4 +1,8 @@
 /*61 : Sélectionner les noms, le numéro de service, l’emplois et le salaires des personnes travaillant dans la même ville que HAVET.*/
+SELECT nom, serv.noserv, emploi, sal, serv.ville
+FROM emp
+INNER JOIN serv ON emp.noserv = serv.noserv
+WHERE serv.ville = 'LILLE';
 
 
 /*62 : Sélectionner les employés du service 1, ayant le même emploi qu'un employé du service N°3.*/
