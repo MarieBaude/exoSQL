@@ -28,17 +28,32 @@ WHERE ;
 /*56 : Sélectionner les employés qui ont le même chef que DUBOIS, DUBOIS exclu.*/
 SELECT nom, prenom
 FROM emp
-WHERE sup = 1300
+WHERE sup 
+IN 
+    (SELECT sup 
+    FROM emp 
+    WHERE nom = 'DUBOIS')
+
 EXCEPT 
 SELECT nom, prenom
 FROM emp
-WHERE nom = 'DUBOIS'
-;
+WHERE nom = 'DUBOIS';
 
-/*57 : Sélectionner les employés embauchés le même jour que DUMONT.*
-
+/*57 : Sélectionner les employés embauchés le même jour que DUMONT.*/
+SELECT nom, prenom, embauche
+FROM emp
+WHERE embauche 
+IN 
+    (SELECT embauche 
+    FROM emp 
+    WHERE nom = 'DUMONT');
 
 /*58 : Sélectionner les nom et date d'embauche des employés plus anciens que MINET, dans l’ordre des embauches.*/
+SELECT nom, prenom, embauche
+FROM emp
+WHERE embauche < 
+ORDER BY embauche
+;
 
 
 /*59 : Sélectionner le nom, le prénom, la date d’embauche des employés plus anciens que tous les employés du service N°6. (Attention MIN)*/
