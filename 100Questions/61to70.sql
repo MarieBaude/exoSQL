@@ -4,8 +4,15 @@ FROM emp
 INNER JOIN serv ON emp.noserv = serv.noserv
 WHERE serv.ville = 'LILLE';
 
-
 /*62 : Sélectionner les employés du service 1, ayant le même emploi qu'un employé du service N°3.*/
+-- SELECT nom, prenom, noserv, emploi
+-- FROM emp emp1
+-- WHERE noserv = 1
+--     (SELECT nom, prenom, noserv, emploi
+--     FROM emp emp2
+--     WHERE noserv = 3
+--     AND emp1.emploi = emp2.emploi);
+
 
 
 /*63 : Sélectionner les employés du service 1 dont l'emploi n'existe pas dans le service 3.*/
@@ -21,7 +28,14 @@ WHERE serv.ville = 'LILLE';
 
 
 /*67 : Sélectionner les employés dont le salaire est plus élevé que le salaire moyen de leur service (moyenne des salaires = avg(sal)), résultats triés par numéros de service.*/
-
+-- Merci Cyril pour la solution
+SELECT nom, sal
+FROM emp emp1
+WHERE sal >
+    (SELECT AVG(sal)
+    FROM emp emp2
+    WHERE emp1.noserv = emp2.noserv)
+ORDER BY noserv;
 
 /*68 : Sélectionner les employés du service INFORMATIQUE embauchés la même année qu'un employé du service VENTES.( année : to_char(embauche,’YYYY’) )*/
 
