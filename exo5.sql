@@ -28,7 +28,6 @@ SELECT N_SEGMENT,  NOM_LOGICIEL
 FROM POSTE
 INNER JOIN LOGICIEL ON NOM_LOGICIEL = 'Oracle 9i';
 
-
 -- Lister le nom des segments possédant exactement trois postes de type TX
 SELECT NOM_SEGMENT, TYPE_POSTE
 FROM SEGMENT

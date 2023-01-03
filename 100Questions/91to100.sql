@@ -24,7 +24,10 @@
 
 
 Plus amusant … ou pas
-/*99 : Depuis combien de jours êtes-vous nés ?
+/*99 : Depuis combien de jours êtes-vous nés ?*/
+SELECT DATEDIFF(day, '1995-02-20', GETDATE())
 
 
-/*100 : Depuis combien de mois êtes-vous nés ?
+
+/*100 : Depuis combien de mois êtes-vous nés ?*/
+
