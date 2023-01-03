@@ -30,4 +30,5 @@ SELECT DATEDIFF(day, '1995-02-20', GETDATE())
 
 
 /*100 : Depuis combien de mois êtes-vous nés ?*/
+SELECT DATEDIFF(month, '1995-02-20', GETDATE())
 
